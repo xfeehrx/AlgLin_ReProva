@@ -440,6 +440,153 @@ $$-1(1,1,1,1,1)+(-1)(2,0,-1,1,3)+1(3,1,0,2,4)+0(2,2,5,8,-1)+0(0,1,0,2,3)=(0,0,0,
 
 \textit{Resposta:} Não, pois apenas conjuntos LI podem ser bases de espaços vetoriais.
 
+\end{question}
+
+\begin{question}{4}
+
+Mostre que o conjunto é base:
+
+\{$(-1,1,1,1,0,1,1)$,$(1,0,-1,1,1,-1,0)$,$(2,2,1,1,-1,1,1)$,$(1,0,0,1,2,1,1)$,\\
+$(2,0,2,0,2,0,2)$,$(1,-1,-1,-1,-1,-1,1)$,$(3,0,2,0,2,-1,2)$\}
+
+\bigskip
+\textit{Gerando o sistema:} 
+
+$$
+\begin{array}{clclcl}
+    &a_1(-1,1,1,1,0,1,1) &+ &a_2(1,0,-1,1,1,-1,0) &+ &a_3(2,2,1,1,-1,1,1)\\
++ &a_4(1,0,0,1,2,1,1) &+ &a_5(2,0,2,0,2,0,2)  &+ &a_6(1,-1,-1,-1,-1,-1,1)\\
++ &a_7(3,0,2,0,2,-1,2) &= &(x_1,x_2,x_3,x_4,x_5,x_6,x_7) & &
+\end{array}
+$$
+
+$$
+\left\{\begin{array}{rcrcrcrcrcrcrcl}
+    -a_1 &+ &a_2  &+ &2a_3 &+ &a_4  &+ &2a_5 &+ &a_6 &+ &3a_7 &= &x_1\\
+     a_1 &  &     &+ &2a_3 &  &     &  &     &- &a_6 &  &     &= &x_2\\
+     a_1 &- &a_2  &+ &a_3  &  &     &+ &2a_5 &- &a_6 &+ &2a_7 &= &x_3\\
+     a_1 &+ &a_2  &+ &a_3  &+ &a_4  &  &     &- &a_6 &  &     &= &x_4\\
+         &  &a_2  &- &a_3  &+ &2a_4 &+ &2a_5 &- &a_6 &+ &2a_7 &= &x_5\\
+     a_1 &- &a_2  &+ &a_3  &+ &a_4  &  &     &- &a_6 &- &a_7  &= &x_6\\
+     a_1 &  &     &+ &a_3  &+ &a_4  &+ &2a_5 &+ &a_6 &+ &2a_7 &= &x_7
+\end{array}\right.
+$$
+
+\newpage
+\textit{Escalonamento:}
+
+\begin{footnotesize}
+$$
+\left[\begin{array}{rrrrrrr|l}
+    -1 & 1 & 2 & 1 & 2 & 1 & 3 & x_1\\
+    1 & 0 & 2 & 0 & 0 & -1 & 0 & x_2\\
+    1 & -1 & 1 & 0 & 2 & -1 & 2 & x_3\\
+    1 & 1 & 1 & 1 & 0 & -1 & 0 & x_4\\
+    0 & 1 & -1 & 2 & 2 & -1 & 2 & x_5\\
+    1 & -1 & 1 & 1 & 0 & -1 & -1 & x_6\\
+    1 & 0 & 1 & 1 & 2 & 1 & 2 & x_7
+\end{array}\right]
+\substack{
+  \mbox{$L_2=L_2+L_1 \rightarrow$}\\[.5em]
+  \mbox{$L_3=L_3+L_1 \rightarrow$}\\[.5em]
+  \mbox{$L_4=L_4+L_1 \rightarrow$}\\[.5em]
+  \mbox{$L_6=L_6+L_1 \rightarrow$}\\[.5em]
+  \mbox{$L_7=L_7+L_1 \rightarrow$}
+}
+\left[\begin{array}{rrrrrrr|l}
+    -1 & 1 & 2 & 1 & 2 & 1 & 3 & x_1\\
+    0 & 1 & 4 & 1 & 2 & 0 & 3 & x_1 + x_2\\
+    0 & 0 & 3 & 1 & 4 & 0 & 5 & x_1 + x_3\\
+    0 & 2 & 3 & 2 & 2 & 0 & 3 & x_1 + x_4\\
+    0 & 1 & -1 & 2 & 2 & -1 & 2 & x_5\\
+    0 & 0 & 3 & 2 & 2 & 0 & 2 & x_1 + x_6\\
+    0 & 1 & 3 & 2 & 4 & 2 & 5 & x_1 + x_7
+\end{array}\right]
+$$
+\end{footnotesize}
+$$
+\substack{
+  \mbox{$L_4=L_4-2L_2 \rightarrow$}\\[.5em]
+  \mbox{$L_5=L_5-L_2 \rightarrow$}\\[.5em]
+  \mbox{$L_7=L_7-L_2 \rightarrow$}
+}
+\left[\begin{array}{rrrrrrr|l}
+    -1 & 1 & 2 & 1 & 2 & 1 & 3 & x_1\\
+    0 & 1 & 4 & 1 & 2 & 0 & 3 & x_1 + x_2\\
+    0 & 0 & 3 & 1 & 4 & 0 & 5 & x_1 + x_3\\
+    0 & 0 & -5 & 0 & -2 & 0 & -3 & - x_1 - 2 x_2 + x_4\\
+    0 & 0 & -5 & 1 & 0 & -1 & -1 & - x_1 - x_2 + x_5\\
+    0 & 0 & 3 & 2 & 2 & 0 & 2 & x_1 + x_6\\
+    0 & 0 & -1 & 1 & 2 & 2 & 2 & - x_2 + x_7
+\end{array}\right]
+$$
+
+$$
+\substack{
+  \mbox{$L_4=L_4+\frac{5}{3}L_3 \rightarrow$}\\[.5em]
+  \mbox{$L_5=L_5+\frac{5}{3}L_3 \rightarrow$}\\[.5em]
+  \mbox{$L_6=6-L_3 \rightarrow$}\\[.5em]
+  \mbox{$L_7=L_7+\frac{L_3}{3} \rightarrow$}
+}
+\left[\begin{array}{rrrrrrr|l}
+    -1 & 1 & 2 & 1 & 2 & 1 & 3 & x_1\\
+    0 & 1 & 4 & 1 & 2 & 0 & 3 & x_1 + x_2\\
+    0 & 0 & 3 & 1 & 4 & 0 & 5 & x_1 + x_3\\
+    0 & 0 & 0 & \frac{5}{3} & \frac{14}{3} & 0 & \frac{16}{3} & \frac{2}{3}x_1 - 2 x_2 + \frac{5}{3}x_3 + x_4\\
+    0 & 0 & 0 & \frac{8}{3} & \frac{20}{3} & -1 & \frac{22}{3} & \frac{2}{3}x_1 - x_2 + \frac{5}{3}x_3 + x_5\\
+    0 & 0 & 0 & 1 & -2 & 0 & -3 & - x_3 + x_6\\
+    0 & 0 & 0 & \frac{4}{3} & \frac{10}{3} & 2 & \frac{11}{3} & \frac{1}{3}x_1 - x_2 + \frac{1}{3}x_3 + x_7
+\end{array}\right]
+$$
+
+$$
+\substack{
+  \mbox{$L_5=L_5-\frac{8}{5}L_4 \rightarrow$}\\[.5em]
+  \mbox{$L_6=L_6-\frac{3}{5}L_4 \rightarrow$}\\[.5em]
+  \mbox{$L_7=L_7-\frac{4}{5}L_4 \rightarrow$}
+}
+\left[\begin{array}{rrrrrrr|l}
+    -1 & 1 & 2 & 1 & 2 & 1 & 3 & x_1\\
+    0 & 1 & 4 & 1 & 2 & 0 & 3 & x_1 + x_2\\
+    0 & 0 & 3 & 1 & 4 & 0 & 5 & x_1 + x_3\\
+    0 & 0 & 0 & \frac{5}{3} & \frac{14}{3} & 0 & \frac{16}{3} & \frac{2}{3}x_1 - 2 x_2 + \frac{5}{3}x_3 + x_4\\
+    0 & 0 & 0 & 0 & - \frac{4}{5} & -1 & - \frac{6}{5} & - \frac{2}{5}x_1 + \frac{11}{5}x_2 - x_3 - \frac{8}{5}x_4 + x_5\\
+    0 & 0 & 0 & 0 & - \frac{24}{5} & 0 & - \frac{31}{5} & - \frac{2}{5}x_1 + \frac{6}{5}x_2 - 2 x_3 - \frac{3}{5}x_4 + x_6\\
+    0 & 0 & 0 & 0 & - \frac{2}{5} & 2 & - \frac{3}{5} & - \frac{1}{5}x_1 + \frac{3}{5}x_2 - x_3 - \frac{4}{5}x_4 + x_7
+\end{array}\right]
+$$
+
+
+$$
+\substack{
+  \mbox{$L_6=L_6-6L_5 \rightarrow$}\\[.5em]
+  \mbox{$L_7=L_7-\frac{L_5}{2} \rightarrow$}
+}
+\left[\begin{array}{rrrrrrr|l}
+    -1 & 1 & 2 & 1 & 2 & 1 & 3 & x_1\\
+    0 & 1 & 4 & 1 & 2 & 0 & 3 & x_1 + x_2\\
+    0 & 0 & 3 & 1 & 4 & 0 & 5 & x_1 + x_3\\
+    0 & 0 & 0 & \frac{5}{3} & \frac{14}{3} & 0 & \frac{16}{3} & \frac{2}{3}x_1 - 2 x_2 + \frac{5}{3}x_3 + x_4\\
+    0 & 0 & 0 & 0 & - \frac{4}{5} & -1 & - \frac{6}{5} & - \frac{2}{5}x_1 + \frac{11}{5}x_2 - x_3 - \frac{8}{5}x_4 + x_5\\
+    0 & 0 & 0 & 0 & 0 & 6 & 1 & 2 x_1 - 12 x_2 + 4 x_3 + 9 x_4 - 6 x_5 + x_6\\
+    0 & 0 & 0 & 0 & 0 & \frac{5}{2} & 0 & - \frac{1}{2}x_2 - \frac{1}{2}x_3 - \frac{1}{2}x_5 + x_7
+\end{array}\right]
+$$
+
+$$
+\substack{
+  \mbox{$L_7=L_7-\frac{5}{12}L_6 \rightarrow$}
+}
+\left[\begin{array}{rrrrrrr|l}
+    -1 & 1 & 2 & 1 & 2 & 1 & 3 & x_1\\
+    0 & 1 & 4 & 1 & 2 & 0 & 3 & x_1 + x_2\\
+    0 & 0 & 3 & 1 & 4 & 0 & 5 & x_1 + x_3\\
+    0 & 0 & 0 & \frac{5}{3} & \frac{14}{3} & 0 & \frac{16}{3} & \frac{2}{3}x_1 - 2 x_2 + \frac{5}{3}x_3 + x_4\\
+    0 & 0 & 0 & 0 & - \frac{4}{5} & -1 & - \frac{6}{5} & - \frac{2}{5}x_1 + \frac{11}{5}x_2 - x_3 - \frac{8}{5}x_4 + x_5\\
+    0 & 0 & 0 & 0 & 0 & 6 & 1 & 2 x_1 - 12 x_2 + 4 x_3 + 9 x_4 - 6 x_5 + x_6\\
+    0 & 0 & 0 & 0 & 0 & 0 & - \frac{5}{12} & - \frac{5}{6}x_1 + \frac{9}{2}x_2 - \frac{13}{6}x_3 - \frac{15}{4}x_4 + 2 x_5 - \frac{5}{12}x_6 + x_7
+\end{array}\right]
+$$
 
 \end{question}
 
