@@ -91,6 +91,85 @@ $$
     a_3(x,y,z) &= &\frac{1}{10}(-x+2y+3z)
 \end{array}
 $$
+
+\newpage
+\bigskip
+\textbf{Fórmulas genéricas para a base B}
+
+\bigskip
+\textit{Gerando o sistema:} 
+
+$$b_1(1,-2,1)+b_2(1,5,2)+b_3(1,0,1)=(x,y,z)$$
+
+$$
+\left\{\begin{array}{rcrcrcr}
+    b_1   &+ &b_2  &+ &b_3 &= &x\\
+    -2b_1 &+ &5b_2 &  &    &= &y\\
+    b_1   &+ &2b_2 &+ &b_3 &= &z
+\end{array}\right.
+$$
+
+\textit{Eq. 2:}
+$$
+\begin{array}{rcl}
+    -2b_1 + 5b_2 &= &y\\
+    b_1 &= &\frac{5}{2}b_2-\frac{y}{2}
+\end{array}
+$$
+
+\bigskip
+\textit{Substituindo Eq. 3:}
+$$
+\begin{array}{rcl}
+    b_1+2b_2+b_3 &= &z\\
+    \frac{5}{2}b_2-\frac{y}{2}+2b_2+b_3 &= &z\\
+    b_3 &= &-\frac{9}{2}b_2+\frac{y}{2}+z
+\end{array}
+$$
+
+\bigskip
+\textit{Substituindo Eq. 1:}
+$$
+\begin{array}{rcl}
+    b_1+b_2+b_3 &= &x\\
+    \frac{5}{2}b_2-\frac{y}{2}+b_2+-\frac{9}{2}b_2+\frac{y}{2}+z &= &x\\
+    b_2 &= &-x+z
+\end{array}
+$$
+
+\bigskip
+\textit{Substituindo Eq. 2:}
+$$
+\begin{array}{rcl}
+    b_1 &= &\frac{5}{2}b_2-\frac{y}{2}\\
+    b_1 &= &\frac{5}{2}(-x+z)-\frac{y}{2}\\
+    b_1 &= &\frac{1}{2}(-5x-y+5z)
+\end{array}
+$$
+
+\bigskip
+\textit{Substituindo Eq. 3:}
+$$
+\begin{array}{rcl}
+    b_3 &= &-\frac{9}{2}b_2+\frac{y}{2}+z\\
+    b_3 &= &-\frac{9}{2}(-x+z)+\frac{y}{2}+z\\
+    b_3 &= &\frac{1}{2}(9x+y-7z)
+\end{array}
+$$
+
+\bigskip
+\textit{Formulas da base B:}
+$$
+\begin{array}{rcl}
+    b_1(x,y,z) &= &\frac{1}{2}(-5x-y+5z)\\
+    b_2(x,y,z) &= &-x+z\\
+    b_3(x,y,z) &= &\frac{1}{2}(9x+y-7z)
+\end{array}
+$$
+
+
+
+
 \end{question}
 
 \end{document}
