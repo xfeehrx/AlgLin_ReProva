@@ -303,4 +303,144 @@ $$v=(-\frac{14}{5},-\frac{63}{10},\frac{41}{10})_A$$
 
 \end{question}
 
+\begin{question}{2}
+$S = \{(1, 1, 1, 1, 1),(2, 0, -1, 1, 3),(3, 1, 0, 2, 4),(2, 2, 5, 8, -1),(0, 1, 0, 2, 3)\}$
+
+\bigskip
+\textbf{a)} $S$ é li ou ld?
+
+\bigskip
+\textit{Gerando o sistema:} 
+
+$$x_1(1,1,1,1,1)+x_2(2,0,-1,1,3)+x_3(3,1,0,2,4)+x_4(2,2,5,8,-1)+x_5(0,1,0,2,3)=(0,0,0,0,0)$$
+
+$$
+\left\{\begin{array}{rcrcrcrcrcl}
+    x_1 &+ &2x_2 &+ &3x_3 &+ &2x_4 &  &     &= &0\\
+    x_1 &  &     &+ &x_3  &+ &2x_4 &+ &x_5  &= &0\\
+    x_1 &- &x_2  &  &     &+ &5x_4 &  &     &= &0\\
+    x_1 &+ &x_2  &+ &2x_3 &+ &8x_4 &+ &2x_5 &= &0\\
+    x_1 &+ &3x_2 &+ &4x_3 &- &x_4  &+ &3x_5 &= &0\\
+\end{array}\right.
+$$
+
+\textit{Escalonamento:}
+
+$$
+\left[\begin{array}{rrrrr|c}
+  1 & 2  & 3 & 2  & 0 & 0\\
+  1 & 0  & 1 & 2  & 1 & 0\\
+  1 & -1 & 0 & 5  & 0 & 0\\
+  1 & 1  & 2 & 8  & 2 & 0\\
+  1 & 3  & 4 & -1 & 3 & 0
+\end{array}\right]
+\substack{
+  \mbox{$L_2=L_2-L_1 \rightarrow$}\\[.5em]
+  \mbox{$L_3=L_3-L_1 \rightarrow$}\\[.5em]
+  \mbox{$L_4=L_4-L_1 \rightarrow$}\\[.5em]
+  \mbox{$L_5=L_5-L_1 \rightarrow$}
+}
+\left[\begin{array}{rrrrr|c}
+  1 & 2  & 3  & 2  & 0 & 0\\
+  0 & -2 & -2 & 0  & 1 & 0\\
+  0 & -3 & -3 & 3  & 0 & 0\\
+  0 & -1 & -1 & 6  & 2 & 0\\
+  0 & 1  & 1  & -3 & 3 & 0
+\end{array}\right]
+$$
+
+$$
+\substack{
+  \mbox{$L_3=L_3-\mfrac{3}{2}L_2 \rightarrow$}\\[.5em]
+  \mbox{$L_4=L_4-\mfrac{L_2}{2} \rightarrow$}\\[.5em]
+  \mbox{$L_5=L_5+\mfrac{L_2}{2} \rightarrow$}
+}
+\left[\begin{array}{rrrrr|c}
+  1 & 2  & 3  & 2  & 0 & 0\\
+  0 & -2 & -2 & 0  & 1 & 0\\
+  0 & 0  & 0  & 3  & -\frac{3}{2} & 0\\
+  0 & 0  & 0  & 6  & \frac{3}{2} & 0\\
+  0 & 0  & 0  & -3 & \frac{7}{2} & 0
+\end{array}\right]
+\substack{
+  \mbox{$L_4=L_4-2L_3 \rightarrow$}\\[.5em]
+  \mbox{$L_5=L_5-L_3 \rightarrow$}
+}
+\left[\begin{array}{rrrrr|c}
+  1 & 2  & 3  & 2  & 0 & 0\\
+  0 & -2 & -2 & 0  & 1 & 0\\
+  0 & 0  & 0  & 3  & -\frac{3}{2} & 0\\
+  0 & 0  & 0  & 0  & 2 & 0\\
+  0 & 0  & 0  & 0 & 5 & 0
+\end{array}\right]
+$$
+
+\textit{Substituição:}
+
+$$
+\left\{\begin{array}{rcrcrcrcrcr}
+  x_1 &+ &2x_2  &+ &3x_3 &+ &2x_4 &  &     &= &0\\
+      &  &-2x_2 &- &2x_3 &  &     &+ &x_5  &= &0\\
+      &  &      &  &     &  &3x_4 &- &\frac{3}{2}x_5 &= &0\\
+      &  &      &  &     &  &     &  &2x_5 &= &0\\
+      &  &      &  &     &  &     &  &5x_5 &= &0\\
+\end{array}\right.
+$$
+
+\textit{Eq. 4:}
+$$
+\begin{array}{rcl}
+  2x_5 &= &0\\
+  x_5 &= &0\\
+\end{array}
+$$
+
+\textit{Eq. 3:}
+$$
+\begin{array}{rcl}
+  3x_4 &= &0\\
+  x_4 &= &0\\
+\end{array}
+$$
+
+\textit{Substituindo Eq. 2:}
+$$
+\begin{array}{rcl}
+  -2x_2-2x_3+x_5  &= &0\\
+  -2x_2-2x_3+0  &= &0\\
+  x_2 = -x_3
+\end{array}
+$$
+
+\textit{Substituindo Eq. 1:}
+$$
+\begin{array}{rcl}
+  x_1+2x_2+3x_3+2x_4 &= &0\\
+  x_1-2x_3+3x_3+0 &= &0\\
+  x_1 = -x_3
+\end{array}
+$$
+
+\textit{Resultados:}
+$$
+\begin{array}{rcl}
+  x_1 &= &-x_3\\
+  x_2 &= &-x_3\\
+  x_3 &= &?\\
+  x_4 &= &0\\
+  x_5 &= &0\\
+\end{array}
+$$
+
+\textit{Resposta:} O conjunto $S$ é LD, pois $x_3$ pode ter qualquer valor para encontrar $(0,0,0,0,0)$. Por exemplo:
+
+$$-1(1,1,1,1,1)+(-1)(2,0,-1,1,3)+1(3,1,0,2,4)+0(2,2,5,8,-1)+0(0,1,0,2,3)=(0,0,0,0,0)$$
+
+\textbf{b)} $S$ forma uma base do $\mathbb{R}$-espaço vetorial $\mathbb{R}^5$?
+
+\textit{Resposta:} Não, pois apenas conjuntos LI podem ser bases de espaços vetoriais.
+
+
+\end{question}
+
 \end{document}
