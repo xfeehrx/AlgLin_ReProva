@@ -1,0 +1,96 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=1.5cm]{geometry}
+\usepackage{mathtools,amsmath,nccmath,amssymb}
+
+\setlength{\parindent}{0pt}
+\renewcommand{\arraystretch}{1.2}
+
+\newenvironment{question}[1]
+  {\par\addvspace{\medskipamount}
+   \noindent\makebox[0pt][r]{\textbf{#1)} }\ignorespaces}
+  {\par\addvspace{\medskipamount}}
+
+
+\begin{document}
+\begin{question}{1}
+$A=\{(4, 2, 0),(1, -1, 1),(5, 3, 3)\}$
+
+$B=\{(1, -2, 1),(1, 5, 2),(1, 0, 1)\}$
+
+\bigskip
+\textbf{Fórmulas genéricas para a base A}
+
+\bigskip
+\textit{Gerando o sistema:} 
+
+$$a_1(4,2,0)+a_2(1,-1,1)+a_3(5,3,3)=(x,y,z)$$
+
+$$
+\left\{\begin{array}{rcrcrcr}
+    4a_1 &+ &a_2 &+ &5a_3 &= &x\\
+    2a_1 &- &a_2 &+ &3a_3 &= &y\\
+         &  &a_2 &+ &3a_3 &= &z
+\end{array}\right.
+$$
+
+\textit{Eq. 3:}
+$$
+\begin{array}{rcl}
+    a_2+3a_3 &= &z\\
+    a_2 &= &-3a_3+z
+\end{array}
+$$
+
+\bigskip
+\textit{Substituindo Eq. 2:}
+$$
+\begin{array}{rcl}
+    2a_1-a_2+3a_3 &= &y\\
+    2a_1+3a_3-z+3a_3 &= &y\\
+    2a_1 &= &-6a_3+y+z
+\end{array}
+$$
+
+\bigskip
+\textit{Substituindo Eq. 1:}
+$$
+\begin{array}{rcl}
+    4a_1+a_2+5a_3 &= &x\\
+    2(-6a_3+y+z)-3a_3+z+5a_3 &= &x\\
+    -10a_3 &= &x-2y-3z\\
+    a_3 &= &\frac{1}{10}(-x+2y+3z)
+\end{array}
+$$
+
+\bigskip
+\textit{Substituindo Eq. 3:}
+$$
+\begin{array}{rcl}
+    a_2 &= &-3a_3+z\\
+    a_2 &= &-\frac{3}{10}(-x+2y+3z)+z\\
+    a_2 &= &\frac{1}{10}(3x-6y+z)
+\end{array}
+$$
+
+\bigskip
+\textit{Substituindo Eq. 2:}
+$$
+\begin{array}{rcl}
+    2a_1 &= &-6a_3+y+z\\
+    2a_1 &= &-\frac{6}{10}(-x+2y+3z)+y+z\\
+    a_1 &= &\frac{1}{10}(3x-y-4z)
+\end{array}
+$$
+
+\bigskip
+\textit{Formulas da base A:}
+$$
+\begin{array}{rcl}
+    a_1(x,y,z) &= &\frac{1}{10}(3x-y-4z)\\
+    a_2(x,y,z) &= &\frac{1}{10}(3x-6y+z)\\
+    a_3(x,y,z) &= &\frac{1}{10}(-x+2y+3z)
+\end{array}
+$$
+\end{question}
+
+\end{document}
