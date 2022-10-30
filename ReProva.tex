@@ -477,7 +477,7 @@ $$
     u &= &(u_1,-u_1,-u_1)\\
     v &= &(v_1,-v_1,-v_1)\\
     u + v &= &(u_1,-u_1,-u_1) + (v_1,-v_1,-v_1)\\
-          &= &((u_1+v_1,-u_1-v_1,-u_1-v_1))\\
+          &= &(u_1+v_1,-u_1-v_1,-u_1-v_1)\\
           &= &(u_1+v_1) \cdot (1,-1,-1)
 \end{array}
 $$
@@ -496,6 +496,61 @@ $$
 $$
 
 Logo $a \cdot v \in W$. Portanto $W$ é um sub-espaço de $\mathbb{R}^3$.
+
+\textbf{c)}
+
+$$S = \{(x,y,z)|x,y,z \in \mathbb{R} \land x+2y=0 \land y+z=0\} \in \mathbb{R}^3$$
+
+$$
+\left\{\begin{array}{rcl}
+  x+2y &= &0\\
+  y+z  &= &0
+\end{array}\right.
+$$
+
+$$x = -2y$$
+$$z = -y$$
+    
+$$S = \{(-2y,y,-y)|x \in \mathbb{R}\}$$
+
+i) $y = 0$
+$$
+\begin{array}{rcl}
+    &  &(-2y,y,-y)\\
+    &= &(-0,0,-0)\\
+    &= &0
+\end{array}
+$$
+
+Logo $0 \in S$.
+
+\bigskip
+ii) $u,v \in S \rightarrow u+v \in S$
+
+$$
+\begin{array}{rcl}
+    u &= &(2u_2,u_2,-u_2)\\
+    v &= &(2v_2,v_2,-v_2)\\
+    u + v &= &(2u_2,u_2,-u_2) + (2v_2,v_2,-v_2)\\
+          &= &(-2u_2-2v_2,u_2+v_2,-u_2-v_2)\\
+          &= &(u_2+v_2) \cdot (-2,1,-1)
+\end{array}
+$$
+
+Logo $u + v \in S$.
+
+\bigskip
+iii) $a \in \mathbb{R}, v \in W \rightarrow a \cdot v \in S$
+
+$$
+\begin{array}{rcl}
+    v &= &(-2v_2,v_2,-v_2)\\
+    a \cdot v &= &(-2a v_2,a v_2,-a v_2)\\
+          &= &(a \cdot v_2) \cdot (-2,1,-1)
+\end{array}
+$$
+
+Logo $a \cdot v \in S$. Portanto $S$ é um sub-espaço de $\mathbb{R}^3$.
 
 \end{question}
 
